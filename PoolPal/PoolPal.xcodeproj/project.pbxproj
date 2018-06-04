@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAC5EE3120C58FAC005EC6CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5EE3020C58FAC005EC6CD /* AppDelegate.swift */; };
+		BAC5EE3320C58FAC005EC6CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5EE3220C58FAC005EC6CD /* LoginViewController.swift */; };
+		BAC5EE3620C58FAC005EC6CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC5EE3420C58FAC005EC6CD /* Main.storyboard */; };
+		BAC5EE3920C58FAC005EC6CD /* PoolPal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAC5EE3720C58FAC005EC6CD /* PoolPal.xcdatamodeld */; };
+		BAC5EE3B20C58FAF005EC6CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC5EE3A20C58FAF005EC6CD /* Assets.xcassets */; };
+		BAC5EE3E20C58FAF005EC6CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC5EE3C20C58FAF005EC6CD /* LaunchScreen.storyboard */; };
+		BAC5EE4620C5930F005EC6CD /* PoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5EE4520C5930F005EC6CD /* PoolsTableViewController.swift */; };
+		BAC5EE4820C59462005EC6CD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5EE4720C59462005EC6CD /* Extensions.swift */; };
+		BAC5EE4A20C59476005EC6CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5EE4920C59476005EC6CD /* User.swift */; };
+		BAC5EE4C20C59483005EC6CD /* Pool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5EE4B20C59483005EC6CD /* Pool.swift */; };
+		BAC5EE4F20C594AC005EC6CD /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5EE4E20C594AC005EC6CD /* UserController.swift */; };
+		BAC5EE5220C594D8005EC6CD /* PoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5EE5120C594D8005EC6CD /* PoolController.swift */; };
+		BAC5EE5620C595BC005EC6CD /* CKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5EE5520C595BC005EC6CD /* CKController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BAC5EE2D20C58FAC005EC6CD /* PoolPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoolPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAC5EE3020C58FAC005EC6CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BAC5EE3220C58FAC005EC6CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BAC5EE3520C58FAC005EC6CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAC5EE3820C58FAC005EC6CD /* PoolPal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PoolPal.xcdatamodel; sourceTree = "<group>"; };
+		BAC5EE3A20C58FAF005EC6CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAC5EE3D20C58FAF005EC6CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAC5EE3F20C58FAF005EC6CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAC5EE4520C5930F005EC6CD /* PoolsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolsTableViewController.swift; sourceTree = "<group>"; };
+		BAC5EE4720C59462005EC6CD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BAC5EE4920C59476005EC6CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BAC5EE4B20C59483005EC6CD /* Pool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pool.swift; sourceTree = "<group>"; };
+		BAC5EE4E20C594AC005EC6CD /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		BAC5EE5120C594D8005EC6CD /* PoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolController.swift; sourceTree = "<group>"; };
+		BAC5EE5520C595BC005EC6CD /* CKController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAC5EE2A20C58FAC005EC6CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAC5EE2420C58FAC005EC6CD = {
+			isa = PBXGroup;
+			children = (
+				BAC5EE2F20C58FAC005EC6CD /* PoolPal */,
+				BAC5EE2E20C58FAC005EC6CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAC5EE2E20C58FAC005EC6CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAC5EE2D20C58FAC005EC6CD /* PoolPal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAC5EE2F20C58FAC005EC6CD /* PoolPal */ = {
+			isa = PBXGroup;
+			children = (
+				BAC5EE4D20C59491005EC6CD /* Models */,
+				BAC5EE5020C594B6005EC6CD /* ModelControllers */,
+				BAC5EE5320C594E5005EC6CD /* ViewControllers */,
+				BAC5EE5720C595D5005EC6CD /* SpecialControllers */,
+				BAC5EE5420C59513005EC6CD /* Resources */,
+			);
+			path = PoolPal;
+			sourceTree = "<group>";
+		};
+		BAC5EE4D20C59491005EC6CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAC5EE4920C59476005EC6CD /* User.swift */,
+				BAC5EE4B20C59483005EC6CD /* Pool.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BAC5EE5020C594B6005EC6CD /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BAC5EE4E20C594AC005EC6CD /* UserController.swift */,
+				BAC5EE5120C594D8005EC6CD /* PoolController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		BAC5EE5320C594E5005EC6CD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BAC5EE3220C58FAC005EC6CD /* LoginViewController.swift */,
+				BAC5EE4520C5930F005EC6CD /* PoolsTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BAC5EE5420C59513005EC6CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BAC5EE3020C58FAC005EC6CD /* AppDelegate.swift */,
+				BAC5EE4720C59462005EC6CD /* Extensions.swift */,
+				BAC5EE3A20C58FAF005EC6CD /* Assets.xcassets */,
+				BAC5EE3420C58FAC005EC6CD /* Main.storyboard */,
+				BAC5EE3C20C58FAF005EC6CD /* LaunchScreen.storyboard */,
+				BAC5EE3F20C58FAF005EC6CD /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BAC5EE5720C595D5005EC6CD /* SpecialControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BAC5EE3720C58FAC005EC6CD /* PoolPal.xcdatamodeld */,
+				BAC5EE5520C595BC005EC6CD /* CKController.swift */,
+			);
+			path = SpecialControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAC5EE2C20C58FAC005EC6CD /* PoolPal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAC5EE4220C58FAF005EC6CD /* Build configuration list for PBXNativeTarget "PoolPal" */;
+			buildPhases = (
+				BAC5EE2920C58FAC005EC6CD /* Sources */,
+				BAC5EE2A20C58FAC005EC6CD /* Frameworks */,
+				BAC5EE2B20C58FAC005EC6CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoolPal;
+			productName = PoolPal;
+			productReference = BAC5EE2D20C58FAC005EC6CD /* PoolPal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAC5EE2520C58FAC005EC6CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Brock Boyington";
+				TargetAttributes = {
+					BAC5EE2C20C58FAC005EC6CD = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = BAC5EE2820C58FAC005EC6CD /* Build configuration list for PBXProject "PoolPal" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAC5EE2420C58FAC005EC6CD;
+			productRefGroup = BAC5EE2E20C58FAC005EC6CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAC5EE2C20C58FAC005EC6CD /* PoolPal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAC5EE2B20C58FAC005EC6CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAC5EE3E20C58FAF005EC6CD /* LaunchScreen.storyboard in Resources */,
+				BAC5EE3B20C58FAF005EC6CD /* Assets.xcassets in Resources */,
+				BAC5EE3620C58FAC005EC6CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAC5EE2920C58FAC005EC6CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAC5EE3320C58FAC005EC6CD /* LoginViewController.swift in Sources */,
+				BAC5EE4820C59462005EC6CD /* Extensions.swift in Sources */,
+				BAC5EE4F20C594AC005EC6CD /* UserController.swift in Sources */,
+				BAC5EE5220C594D8005EC6CD /* PoolController.swift in Sources */,
+				BAC5EE4A20C59476005EC6CD /* User.swift in Sources */,
+				BAC5EE5620C595BC005EC6CD /* CKController.swift in Sources */,
+				BAC5EE4620C5930F005EC6CD /* PoolsTableViewController.swift in Sources */,
+				BAC5EE3920C58FAC005EC6CD /* PoolPal.xcdatamodeld in Sources */,
+				BAC5EE4C20C59483005EC6CD /* Pool.swift in Sources */,
+				BAC5EE3120C58FAC005EC6CD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BAC5EE3420C58FAC005EC6CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAC5EE3520C58FAC005EC6CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAC5EE3C20C58FAF005EC6CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAC5EE3D20C58FAF005EC6CD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAC5EE4020C58FAF005EC6CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAC5EE4120C58FAF005EC6CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAC5EE4320C58FAF005EC6CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HSBGDDNL2A;
+				INFOPLIST_FILE = "$(SRCROOT)/PoolPal/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.BrockBoyington.PoolPal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAC5EE4420C58FAF005EC6CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HSBGDDNL2A;
+				INFOPLIST_FILE = "$(SRCROOT)/PoolPal/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.BrockBoyington.PoolPal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAC5EE2820C58FAC005EC6CD /* Build configuration list for PBXProject "PoolPal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAC5EE4020C58FAF005EC6CD /* Debug */,
+				BAC5EE4120C58FAF005EC6CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAC5EE4220C58FAF005EC6CD /* Build configuration list for PBXNativeTarget "PoolPal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAC5EE4320C58FAF005EC6CD /* Debug */,
+				BAC5EE4420C58FAF005EC6CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BAC5EE3720C58FAC005EC6CD /* PoolPal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BAC5EE3820C58FAC005EC6CD /* PoolPal.xcdatamodel */,
+			);
+			currentVersion = BAC5EE3820C58FAC005EC6CD /* PoolPal.xcdatamodel */;
+			path = PoolPal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BAC5EE2520C58FAC005EC6CD /* Project object */;
+}
