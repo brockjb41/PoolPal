@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct Pool {
+    var users: [User]
+    var creator: User
+    
+}

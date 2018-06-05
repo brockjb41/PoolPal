@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA44499720C6FEA100D3FD71 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA44499620C6FEA100D3FD71 /* CloudKit.framework */; };
 		BAC5EE3120C58FAC005EC6CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5EE3020C58FAC005EC6CD /* AppDelegate.swift */; };
 		BAC5EE3320C58FAC005EC6CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5EE3220C58FAC005EC6CD /* LoginViewController.swift */; };
 		BAC5EE3620C58FAC005EC6CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC5EE3420C58FAC005EC6CD /* Main.storyboard */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA44499520C6FE9E00D3FD71 /* PoolPal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PoolPal.entitlements; sourceTree = "<group>"; };
+		BA44499620C6FEA100D3FD71 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BAC5EE2D20C58FAC005EC6CD /* PoolPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoolPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC5EE3020C58FAC005EC6CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAC5EE3220C58FAC005EC6CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -45,17 +48,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA44499720C6FEA100D3FD71 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA44499220C6FE8200D3FD71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA44499620C6FEA100D3FD71 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BAC5EE2420C58FAC005EC6CD = {
 			isa = PBXGroup;
 			children = (
 				BAC5EE2F20C58FAC005EC6CD /* PoolPal */,
 				BAC5EE2E20C58FAC005EC6CD /* Products */,
+				BA44499220C6FE8200D3FD71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +83,7 @@
 		BAC5EE2F20C58FAC005EC6CD /* PoolPal */ = {
 			isa = PBXGroup;
 			children = (
+				BA44499520C6FE9E00D3FD71 /* PoolPal.entitlements */,
 				BAC5EE4D20C59491005EC6CD /* Models */,
 				BAC5EE5020C594B6005EC6CD /* ModelControllers */,
 				BAC5EE5320C594E5005EC6CD /* ViewControllers */,
@@ -160,6 +174,14 @@
 				TargetAttributes = {
 					BAC5EE2C20C58FAC005EC6CD = {
 						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -352,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PoolPal/PoolPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HSBGDDNL2A;
 				INFOPLIST_FILE = "$(SRCROOT)/PoolPal/Resources/Info.plist";
@@ -370,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PoolPal/PoolPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HSBGDDNL2A;
 				INFOPLIST_FILE = "$(SRCROOT)/PoolPal/Resources/Info.plist";
