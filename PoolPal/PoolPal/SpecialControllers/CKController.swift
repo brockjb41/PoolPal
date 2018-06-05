@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import CloudKit
+
+class CKController {
+    static let shared = CKController()
+    
+    let publicDB = CKContainer.default().publicCloudDatabase
+    
+    func fetch(type: String, predicate: NSPredicate,completion: @escaping([CKRecord]?, Error?) -> Void) {
+        let query = CKQuery(recordType: type, predicate: predicate)
+        publicDB.perform(query, inZoneWith: nil, completionHandler: completion)
+    }
+}
