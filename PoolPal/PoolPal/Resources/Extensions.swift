@@ -28,9 +28,6 @@ extension UIColor {
     static func mainOffWhite() -> UIColor {
         return UIColor(red: 249.0/255.0, green: 249.0/255.0, blue: 249.0/255.0, alpha: 1.0)
     }
-    
-    
-    
 }
 
 extension UIView {
