@@ -10,19 +10,20 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class SquaresCollectionViewController: UICollectionViewController {
+class SquaresCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     let layout = UICollectionViewFlowLayout()
-    
+    override var collectionViewLayout: UICollectionViewLayout
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 //        collectionView?.backgroundColor = .green
         // Register cell classes
+        setupView()
         navigationController?.navigationBar.barTintColor = UIColor.mainRed()
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .save, target: self, action: #selector(savePool(_:)))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .save, target: self, action: #selector(savePoolButtonTapped(_:)))
         
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
@@ -33,12 +34,35 @@ class SquaresCollectionViewController: UICollectionViewController {
         self.navigationController?.isNavigationBarHidden = false
     }
     
-    @objc func savePool(_ sender: UIBarButtonItem) {
-        print("pool saved")
+    @objc func savePoolButtonTapped(_ sender: UIBarButtonItem) {
+        let isCreator = true
+        guard let name = poolNameTextField.text, !name.isEmpty else { return }
+        let style = "Squares"
+        PoolController.shared.createPool(name: name, isCreator: isCreator, style: style) { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.navigationController?.show(PoolsTableViewController(), sender: nil)
+                }
+            }
+        }
+    }
+    
+    lazy var poolNameTextField: UITextField = {
+        let pntf = UITextField()
+        pntf.text = PoolController.shared.currentPool?.name
+        pntf.backgroundColor = .white
+        pntf.placeholder = "Enter pool name here"
+        pntf.textAlignment = .center
+        return pntf
+    }()
+    
+    @objc func goToNextView(_ sender: UIBarButtonItem) {
+        let nextView = PoolsTableViewController()
+        self.navigationController?.show(nextView, sender: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = CGSize(width: 50, height: 50)
+        let size = CGSize(width: view.frame.width / 11.5, height: view.frame.width / 11.5)
         return size
     }
     
@@ -53,27 +77,23 @@ class SquaresCollectionViewController: UICollectionViewController {
         return 1.0
     }
     
-    override func collectionView(_ collectionView: UICollectionView, shouldSpringLoadItemAt indexPath: IndexPath, with context: UISpringLoadedInteractionContext) -> Bool {
-        return true
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        var selectedCell = SquaresCollectionViewController.index(ofAccessibilityElement: indexPath)
     }
     
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 11
     }
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 4
+        return 11
     }
+    
+    
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) 
@@ -119,13 +139,13 @@ class SquaresCollectionViewController: UICollectionViewController {
         return true
     }
     
-
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
         return false
     }
-*/
+    */
+    
     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
         return true
     }
@@ -135,4 +155,19 @@ class SquaresCollectionViewController: UICollectionViewController {
 //        let action = animateZoomforCell(zoomCell:)
 //
 //    }
+    
+    func setupView() {
+        view.addSubview(poolNameTextField)
+        
+        poolNameTextField.anchor(top: nil,
+                                 left: view.leftAnchor,
+                                 bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                                 right: view.rightAnchor,
+                                 paddingTop: 0,
+                                 paddingLeft: 50,
+                                 paddingBottom: -20,
+                                 paddingRight: 50,
+                                 width: 0,
+                                 height: 50)
+    }
 }

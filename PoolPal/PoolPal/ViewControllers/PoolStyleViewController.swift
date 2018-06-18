@@ -15,20 +15,10 @@ class PoolStyleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        self.view.backgroundColor = UIColor.mainRed()
-        
         // Do any additional setup after loading the view.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    //MARK: - Navigation
     
     @objc func goToNextView(sender: UIButton) {
         switch sender {
@@ -48,9 +38,7 @@ class PoolStyleViewController: UIViewController {
             self.nextView = nextView
         }
         print("\(nextView)")
-//        self.present(nextView, animated: true)
         self.navigationController?.show(nextView, sender: self)
-    
     }
 
     lazy var styleLabel: UILabel = {
@@ -106,7 +94,8 @@ class PoolStyleViewController: UIViewController {
         self.view.addSubview(bracketButton)
         self.view.addSubview(pickEmButton)
         self.view.addSubview(styleLabel)
-        
+        self.view.backgroundColor = UIColor.mainRed()
+
         styleLabel.anchor(top: view.topAnchor,
                           left: view.leftAnchor,
                           bottom: nil,

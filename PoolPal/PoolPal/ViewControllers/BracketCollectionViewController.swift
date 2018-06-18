@@ -20,15 +20,32 @@ class BracketCollectionViewController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        setupView()
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    lazy var poolNameTextField: UITextField = {
+        let pntf = UITextField()
+        pntf.text = PoolController.shared.currentPool?.name
+        pntf.backgroundColor = .white
+        pntf.placeholder = "Enter pool name here"
+        pntf.textAlignment = .center
+        return pntf
+    }()
+    
+    @objc func savePoolButtonTapped(_ sender: UIBarButtonItem) {
+        let isCreator = true
+        let style = "Bracket"
+        guard let name = poolNameTextField.text, !name.isEmpty else { return }
+        PoolController.shared.createPool(name: name, isCreator: isCreator, style: style) { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.navigationController?.show(PoolsTableViewController(), sender: nil)
+                }
+            }
+        }
     }
-
+    
     /*
     // MARK: - Navigation
 
@@ -90,5 +107,18 @@ class BracketCollectionViewController: UICollectionViewController {
     
     }
     */
-
+    func setupView() {
+        view.addSubview(poolNameTextField)
+        
+        poolNameTextField.anchor(top: nil,
+                                 left: view.leftAnchor,
+                                 bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                                 right: view.rightAnchor,
+                                 paddingTop: 0,
+                                 paddingLeft: 50,
+                                 paddingBottom: -20,
+                                 paddingRight: 50,
+                                 width: 0,
+                                 height: 50)
+    }
 }

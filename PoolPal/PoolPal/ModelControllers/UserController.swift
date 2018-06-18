@@ -8,11 +8,11 @@
 
 import UIKit
 import CloudKit
+import Contacts
 
 class UserController {
     static var shared = UserController()
-//    var pools = [Pool]()
-//    var user = User()
+    var loggedInUser: User?
 
     func fetchCurrentUser(completion: @escaping(Bool) -> Void) {
 
@@ -44,7 +44,7 @@ class UserController {
         }
     }
 
-    func createNewUser(username: String, email: String, password: String, completion: @escaping(Bool) -> Void) {
+    func createNewUser(username: String, completion: @escaping(Bool) -> Void) {
         CKContainer.default().fetchUserRecordID { (appleUserRecordID, error) in
             if let error = error {
                 print("error getting new user record ID: \(error)")
@@ -56,7 +56,7 @@ class UserController {
 
             let appleUserRef = CKReference(recordID: appleUserRecordID, action: .deleteSelf)
 
-            let newUser = User(username: username, email: email, password: password, appleUserRef: appleUserRef)
+            let newUser = User(username: username, appleUserRef: appleUserRef)
 
             let record = CKRecord(user: newUser)
 
@@ -70,5 +70,13 @@ class UserController {
                 completion(true)
             })
         }
+    }
+    
+    func addFriend(appleUserRef: CKReference?, username: String?) {
+        
+    }
+    
+    func requestAccess(for EntityType: CNEntityType, completion: (Bool, Error?) -> Void) {
+        
     }
 }
