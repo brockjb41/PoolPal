@@ -1,0 +1,6 @@
+framework module Pods_PoolPal {
+  umbrella header "Pods-PoolPal-umbrella.h"
+
+  export *
+  module * { export * }
+}

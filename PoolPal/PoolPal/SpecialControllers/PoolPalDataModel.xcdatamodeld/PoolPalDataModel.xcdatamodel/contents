@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Pool" representedClassName="Pool" syncable="YES">
+        <attribute name="creator" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="pools" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="appleUserRefString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cloudKitRecordIDString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" attributeType="String" syncable="YES"/>
+        <attribute name="password" attributeType="String" syncable="YES"/>
+        <attribute name="username" attributeType="String" syncable="YES"/>
+        <relationship name="pools" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pool" inverseName="users" inverseEntity="Pool" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Pool" positionX="-54" positionY="18" width="128" height="90"/>
+        <element name="User" positionX="-324" positionY="-153" width="128" height="135"/>
+    </elements>
+</model>
